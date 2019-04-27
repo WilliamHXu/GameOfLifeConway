@@ -1,5 +1,6 @@
 package com.zipcodeconway;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -22,7 +23,8 @@ public class ConwayGameOfLifeTest {
                 {0, 0, 0, 0, 0}};
         ConwayGameOfLife sim = new ConwayGameOfLife(5, start);
         int[][] results = sim.simulate(9);
-        assertTrue(java.util.Arrays.deepEquals(results, expected));
+        Assert.assertArrayEquals(expected, results);
+//        assertTrue(java.util.Arrays.deepEquals(results, expected));
     }
 
     @Test
@@ -41,6 +43,7 @@ public class ConwayGameOfLifeTest {
                 {0, 0, 0, 0, 0}};
         ConwayGameOfLife sim = new ConwayGameOfLife(5, start);
         int[][] results = sim.simulate(10);
-        assertTrue(java.util.Arrays.deepEquals(results, expected));
+        Assert.assertArrayEquals(expected, results);
+//        assertTrue(java.util.Arrays.deepEquals(results, expected));
     }
 }
